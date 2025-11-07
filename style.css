@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+body {
+  background: #0a0a0a;
+  overflow-x: hidden;
+}
+
+/* === GRID BACKGROUND === */
+.grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(transparent 97%, rgba(255,255,255,0.05) 100%), 
+                    linear-gradient(90deg, transparent 97%, rgba(255,255,255,0.05) 100%);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+/* === HERO SECTION === */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 0 10%;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.job-tag {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.job-tag span {
+  background: #b5ff00;
+  color: #000;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #b5ff00;
+}
+
+.desc {
+  margin-top: 15px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  background: #b5ff00;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e3ff69;
+  transform: scale(1.05);
+}
+
+.btn.small {
+  font-size: 0.9rem;
+  padding: 8px 16px;
+}
+
+.portofolio {
+  background: #b5ff00;
+  color: #000;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #b5ff00;
+}
+
+/* === LASER EFFECT === */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  width: 300px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff0040, transparent);
+  animation: laserMove 4s linear infinite;
+}
+
+@keyframes laserMove {
+  0% { transform: translateX(-100vw); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100vw); opacity: 0; }
+}
+
+/* === SECTIONS === */
+section {
+  padding: 80px 10%;
+}
+
+.skills {
+  background: #0f0f0f;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #b5ff00;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 25px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  border-color: #b5ff00;
+  box-shadow: 0 0 10px #b5ff00;
+}
+
+.about {
+  background: #0a0a0a;
+  text-align: center;
+}
+
+.about h2 {
+  color: #b5ff00;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  color: #ccc;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+/* === PROJECTS SECTION === */
+.projects {
+  background: #0f0f0f;
+  text-align: center;
+}
+
+.projects h2 {
+  color: #b5ff00;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.project-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 25px;
+  width: 280px;
+  border-radius: 10px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  border-color: #b5ff00;
+  box-shadow: 0 0 15px #b5ff00;
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  color: #b5ff00;
+  margin-bottom: 10px;
+}
+
+/* === CONTACT SECTION === */
+.contact {
+  text-align: center;
+  background: #0a0a0a;
+}
+
+.contact h2 {
+  color: #b5ff00;
+  margin-bottom: 15px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #b5ff00;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0f0f0f;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.9rem;
+  color: #888;
+}
